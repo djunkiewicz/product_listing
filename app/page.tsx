@@ -1,25 +1,33 @@
-import Image from "next/image";
+// Styles
 import styles from "./page.module.css";
+
+// Components
 import Header from '@/components/Header/Header';
 import ProductList from '@/components/ProductList/ProductList'
 
-import { Product } from "@/types/product";
+// Types
+import { Product } from "@/types/product.types";
 
-const productList: Product[] = [
-    {name: "product1", price: 32},
-    {name: "product2", price: 43},
-    {name: "product3", price: 5646},
-    {name: "product4", price: 54},
-    {name: "product5", price: 4324}]
+// NPM packages
+import axios from "axios";
 
 
-export default function Home() {
-  return (
+export default async function Home() {
+    const response = await axios.get(
+        "https://1jbod7rtr5.execute-api.eu-central-1.amazonaws.com/prod/exercise",
+        {
+            headers: {
+                "x-api-key": process.env.API_KEY!,
+            },
+        }
+    );
+    const fetchedProducts: Product[] = response.data.products;
+    return (
     <main>
-      <Header />
-      <div className="body">
+      <Header imgUrl={response.data.logo.url}/>
+      <div className={styles.body}>
         <h3>This is the main content (Body)</h3>
-        <ProductList  products={productList} />
+        <ProductList  products={fetchedProducts} />
       </div>
     </main>
   );

@@ -1,3 +1,37 @@
 .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(4, 6, 111);
+}
+
+.leftPanel,
+.rightPanel {
+    background-color: transparent;
+    align-items: center;
+    display: flex;
+}
+
+.leftPanel
+
+.rightPanel {
+
+}
+
+.navbarButton {
+    background-color: aqua;
+}
+
+.cartButton {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     background-color: red;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.cartButton img {
+    height: 50px;
 }
