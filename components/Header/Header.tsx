@@ -16,9 +16,11 @@ export default function Header({imgUrl}: Props) {
             <img className={styles.logo} src={imgUrl} />
         </div>
         <div className={styles.rightPanel}>
-            <Button  text='Products' type='primary' size='small'/>
-            <Button  text='About' type='secondary' size='medium'/>
-            <Button  text='Partners' type='navbar' size='large'/>
+            <Button  text='Home' type='navbar' size='medium'/>
+            <Button  text='Products' type='navbar' size='medium'/>
+            <Button  text='About' type='navbar' size='medium'/>
+            <Button  text='Partners' type='navbar' size='medium'/>
+            <Button  text='Contact' type='navbar' size='medium'/>
             <button className={styles.cartButton}><img src="shopping-cart.svg"/></button>
         </div>        
     </header>

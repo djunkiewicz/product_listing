@@ -1,3 +1,31 @@
 .body {
-    background-color: rgb(255, 213, 159);
+    background-color: var(--dark-blue);
+    /* width: 80%; */
+}
+
+.topContainer {
+    height: 500px;
+    background-image: url("/mountain2.jpg");
+    background-size: cover;
+    background-position: center 50%;
+    display: flex;
+}
+
+.introContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.introContainer > * {
+    margin: 10px 0 10px 0;
+}
+
+.btnGroup {
+    display: flex;
+}
+
+.btnGroup > * {
+    margin-right: 10px;
 }
