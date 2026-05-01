@@ -1,3 +1,65 @@
 .mainContainer {
-    background-color: blueviolet;
+    /* background-color: rgb(43, 226, 83); */
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.primary {
+    color: var(--dark-blue);
+    background-color: var(--green-fluo);
+    border: 1px solid var(--green-fluo);
+    font-weight: bold;
+}
+
+.primary:hover {
+    background-color: var(--green-fluo-hover);
+    border: 1px solid var(--green-fluo-hover);
+}
+
+.secondary {
+    color: var(--green-fluo);
+    background-color: var(--dark-blue);
+    border: 1px solid var(--green-fluo);
+    font-weight: bold;
+}
+
+.secondary:hover {
+    color: var(--dark-blue);
+    background-color: var(--green-fluo-hover);
+    border: 1px solid var(--green-fluo-hover);
+}
+
+.navbar {
+    background-color: transparent;
+    border: none;
+    /* background-color:grey */
+}
+
+.navbar:hover {
+    color: var(--green-fluo);
+    /* background-color:grey */
+}
+
+.small {
+    height: 30px;
+    font-size: var(--font-small);
+    padding: 6px;
+}
+
+.medium {
+    height: 42px;
+    font-size: var(--font-medium);
+    padding: 8px;
+}
+
+.large {
+    height: 55px;
+    font-size: var(--font-large);
+    padding: 10px;
 }

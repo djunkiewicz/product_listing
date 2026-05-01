@@ -1,4 +1,8 @@
+// Styles
 import styles from './Header.module.css';
+
+// Components
+import Button from "@/components/common/Button/Button"
 
 type Props = {
     imgUrl: string;
@@ -8,14 +12,13 @@ export default function Header({imgUrl}: Props) {
   return (
     <header className={styles.header}>
         <div className={styles.leftPanel}>
-            <h1>ActiveShop</h1>
-            <img src={imgUrl} />
+            <h1 className={styles.companyName}>ActiveShop</h1>
+            <img className={styles.logo} src={imgUrl} />
         </div>
         <div className={styles.rightPanel}>
-            <button className={styles.navbarButton}>Products</button>
-            <button className={styles.navbarButton}>About</button>
-            <button className={styles.navbarButton}>Partners</button>
-            <button className={styles.navbarButton}>Contact</button>
+            <Button  text='Products' type='primary' size='small'/>
+            <Button  text='About' type='secondary' size='medium'/>
+            <Button  text='Partners' type='navbar' size='large'/>
             <button className={styles.cartButton}><img src="shopping-cart.svg"/></button>
         </div>        
     </header>

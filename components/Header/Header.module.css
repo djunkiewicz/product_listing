@@ -1,7 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(4, 6, 111);
+    background-color: var(--dark-green);
 }
 
 .leftPanel,
@@ -11,27 +11,30 @@
     display: flex;
 }
 
-.leftPanel
+/* .leftPanel {
+
+} */
 
 .rightPanel {
-
+    margin-right: 5px;
 }
 
-.navbarButton {
-    background-color: aqua;
+.rightPanel > * {
+    margin: 0px 5px 0 5px;
+} 
+
+.companyName {
+    margin: 5px 10px 5px 10px;
 }
 
 .cartButton {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    background-color: red;
+    background-color: rgb(41, 78, 212);
     border: none;
     border-radius: 10px;
-    padding: 5px;
-    margin: 10px;
+    padding: 4px;
+    margin: 8px;
 }
 
 .cartButton img {
-    height: 50px;
+    height: 30px;
 }

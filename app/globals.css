@@ -1,6 +1,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Colors */
+  --dark-green: #00420f;
+  --dark-blue: #000d58;
+  --primary-blue: #385ae0;
+  --secondary-blue: #1637f5;
+  --green-fluo: #95ff00;
+  --green-fluo-hover: #85e300;
+
+  /* Font sizes */
+  --font-large: 17px;
+  --font-medium: 15px;
+  --font-small: 13px;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -17,15 +17,10 @@ export default function Button({
     onClick,
     iconSrc
 }: Props) {
+  const classList = `${styles.btn} ${styles[type]} ${styles[size]}`
   return (
     <div className={styles.mainContainer}>
-        <button className={
-            type === "primary"
-            ? "btn btnPrimary"
-            : type === "secondary"
-              ? "btn btnSecondary"
-              : "btn btnNavbar"
-      }>{text}</button>
+        <button className={classList}>{text}</button>
     </div>
   );
 }
