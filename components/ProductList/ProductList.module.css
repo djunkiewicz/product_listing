@@ -1,3 +1,34 @@
 .mainContainer {
-    background-color: rgb(64, 168, 212);
+    background-color: rgb(42, 42, 50);
+}
+
+.mainContainer > * {
+    margin-left: var(--left-margin-main);
+    margin-right: var(--right-margin-main);
+}
+
+.mainContainer > h2 {
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.cardsContainer {
+    display: grid;
+    /* grid-template-columns: repeat(3, minmax(250px, 1fr)); */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 1200px) {
+    .cardsContainer {
+        /* grid-template-columns: repeat(2, minmax(250px, 1fr)); */
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    .cardsContainer {
+        grid-template-columns: 1fr;
+    }
 }

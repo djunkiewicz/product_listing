@@ -9,10 +9,12 @@ type Props = {
 export default function ProductList({products}: Props) {
   return (
     <div className={styles.mainContainer}>
-        <h5>This is the product list component</h5>
-        {products.map(p =>(
-            <ProductCard key={p.articleNumber} product={p}/>
-        ))}
+        <h2>Our products</h2>
+        <div className={styles.cardsContainer}>
+          {products.map(p =>(
+              <ProductCard key={p.articleNumber} product={p}/>
+          ))}
+        </div>
     </div>
   );
 }

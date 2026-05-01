@@ -38,7 +38,9 @@ export default async function Home() {
             </div>
           </div>
         </div>
-        <h3>This is the main content (Body)</h3>
+        <div className={styles.benefitsContainer}>
+          <h4>DELIVERY PROMO QUALITY</h4>
+        </div>
         <ProductList  products={fetchedProducts} />
       </div>
     </main>
