@@ -10,7 +10,7 @@ type Props = {
   fallbackPath?: string;
 };
 
-export default function ImageWithFallback({ src, alt = "", className, fallbackPath="/no_image.jpg" }: Props) {
+export default function ImageWithFallback({ src, alt = "", className, fallbackPath="/images/no_image.jpg" }: Props) {
   const [hasFailed, setHasFailed] = useState(false);
 
   const imageSrc = hasFailed ? fallbackPath : src;

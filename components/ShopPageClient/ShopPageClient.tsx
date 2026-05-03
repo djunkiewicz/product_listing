@@ -39,9 +39,9 @@ export default function ShopPageClient({logoUrl, products}: Props) {
       <div className={styles.body}>
         <div className={styles.topContainer}>
           <div className={styles.introContainer}>
-            <span>DISCOVER. TRAIN. CONQUER.</span>
-            <h1>Equipment and clothing for your passions</h1>
-            <h5>Proven accessories and clothing that will withstand any conditions.</h5>
+            <span className={styles.motto}>DISCOVER. TRAIN. CONQUER.</span>
+            <h1 className={styles.motto2}>Equipment and clothing for your passions</h1>
+            <span className={styles.motto3}>Proven accessories and clothing that will withstand any conditions.</span>
             <div className={styles.btnGroup}>
               <Button  text="See, what's new" type="primary" size="large" />
               <Button  text="Check promotions" type="secondary" size="large" />
@@ -49,7 +49,18 @@ export default function ShopPageClient({logoUrl, products}: Props) {
           </div>
         </div>
         <div className={styles.benefitsContainer}>
-          <h4>DELIVERY PROMO QUALITY</h4>
+            <div className={styles.benefit}>
+                <img src="/icons/delivery.svg" className={styles.benefitIcon} />
+                <span>Fast Delivery</span>
+            </div>
+            <div className={styles.benefit}>
+                <img src="/icons/promo.svg" className={styles.benefitIcon} />
+                <span>Great Deals</span>
+            </div>
+            <div className={styles.benefit}>
+                <img src="/icons/quality2.svg" className={styles.benefitIcon} />
+                <span>High Quality</span>
+            </div>
         </div>
         <ProductList  products={products} addToCartFn={addToCart} />
       </div>

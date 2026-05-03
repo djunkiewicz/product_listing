@@ -1,5 +1,6 @@
 .mainContainer {
     background-color: var(--grey);
+    
     max-width: 400px;
     min-width: 350px;
     border-radius: 20px;

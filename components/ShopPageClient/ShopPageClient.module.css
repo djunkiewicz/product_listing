@@ -7,9 +7,9 @@
 
 .topContainer {
     height: 500px;
-    background-image: url("/mountain2.jpg");
+    background-image: url("/images/mountain2.jpeg");
     background-size: cover;
-    background-position: center 50%;
+    background-position: center 59%;
     display: flex;
 }
 
@@ -38,4 +38,32 @@
     justify-content: center;
     align-items: center;
     background-color: var(--dark-blue);
+}
+
+.motto {
+    color: var(--green-fluo);
+    font-weight: bold;
+}
+
+.motto3 {
+    font-size: var(--font-medium);
+}
+
+.benefitsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0  calc(2.5 * var(--right-margin-main))  0 calc(2.5 * var(--left-margin-main));
+}
+
+.benefit {
+    margin: 0 40px 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-medium);
+}
+
+.benefitIcon {
+    max-height: 45px;
+    margin-right: 10px;
 }

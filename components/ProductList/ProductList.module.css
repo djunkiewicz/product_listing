@@ -1,5 +1,6 @@
 .mainContainer {
     background-color: var(--dark-grey);
+    background-color: var(--faded-black);
     padding-bottom: 50px;
 }
 
