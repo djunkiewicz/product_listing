@@ -1,5 +1,3 @@
-"use client";
-
 // Styles
 import styles from "./ProductCard.module.css";
 
@@ -8,6 +6,7 @@ import { Product } from "@/types/product.types";
 
 //Components
 import Button from "@/components/common/Button/Button";
+import ImageWithFallback from "@/components/common/ImageWithFallback/ImageWithFallback";
 
 type Props = {
     product: Product
@@ -18,10 +17,6 @@ export default function ProductCard({product}: Props) {
   // if (product.articleNumber === '3821047') {
   //   description = product.description + product.description + product.description;
   // }
-
-  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.src = "no_image.jpg";
-  };
   
   const calculatePromoPrice = (originalPrice: number, percentage: number): number => {
     return Number(((100 - percentage) / 100 * originalPrice).toFixed(2));
@@ -44,8 +39,8 @@ export default function ProductCard({product}: Props) {
   return (
     <div className={styles.mainContainer}>
         <div className={styles.imagesWrapper}>
-          <img className={styles.productImg} src={product.image.url} onError={handleImageError}/>
-          <img className={styles.productImgBackground} src={product.image.url} />
+          <ImageWithFallback src={product.image.url} className={styles.productImg} />
+          <ImageWithFallback src={product.image.url} className={styles.productImgBackground} />
         </div>
         <div className={styles.bottomContainer}>
           <div className={styles.title}>{product.title}</div>
