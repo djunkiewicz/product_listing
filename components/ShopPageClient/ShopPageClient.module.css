@@ -1,0 +1,41 @@
+.body {
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.topContainer {
+    height: 500px;
+    background-image: url("/mountain2.jpg");
+    background-size: cover;
+    background-position: center 50%;
+    display: flex;
+}
+
+.introContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: var(--left-margin-main);
+}
+
+.introContainer > * {
+    margin: 10px 0 10px 0;
+}
+
+.btnGroup {
+    display: flex;
+}
+
+.btnGroup > * {
+    margin-right: 10px;
+}
+
+.benefitsContainer {
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+}
