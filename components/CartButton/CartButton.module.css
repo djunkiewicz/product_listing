@@ -1,11 +1,36 @@
+.mainContainer {
+    position: relative;
+}
+
+.mainContainer:hover {
+    cursor: pointer;
+}
+
 .cartButton {
-    background-color: rgb(41, 78, 212);
+    background-color: var(--green-fluo);
     border: none;
     border-radius: 10px;
-    padding: 4px;
-    margin: 8px;
+    padding: 4px 6px 3px 6px;
+    margin: 10px 10px 5px 10px;
+    cursor: pointer;
+
 }
 
 .cartButton img {
     height: 30px;
+    padding: 5px 5px 0 0;
+}
+
+.counter {
+  background-color: var(--red);
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  min-height: 22px;
+  min-width: 22px;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
 }
