@@ -1,0 +1,7 @@
+.mainContainer {
+    min-height: 200px;
+    display: flex;
+    background-color: var(--dark-blue);
+    justify-content: center;
+    align-items: center;
+}

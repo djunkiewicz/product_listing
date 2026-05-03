@@ -1,6 +1,7 @@
 .mainContainer {
-    background-color: rgb(61, 61, 61);
+    background-color: var(--grey);
     max-width: 400px;
+    min-width: 350px;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -10,13 +11,13 @@
 }
 
 .mainContainer:hover {
-    background-color: rgb(90, 90, 90);
+    background-color: var(--grey-hover);
 }
 
 .imagesWrapper {
     position: relative;
     overflow: hidden;
-    height: 350px;
+    height: 300px;
     width: auto;
 }
 
@@ -76,7 +77,14 @@
 }
 
 .promoName {
-    color: rgb(194, 15, 15);
+    color: var(--red);
+}
+
+.oldPrice,
+.newPrice,
+.promoName,
+.normalPrice {
+    font-size: var(--font-large);
 }
 
 .oldPrice {
@@ -84,9 +92,7 @@
 }
 
 .newPrice {
-    color: rgb(0, 172, 0);
-    color: rgb(194, 15, 15);
-
+    color: var(--red);
     font-weight: bold;
 }
 

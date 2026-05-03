@@ -1,15 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 
   /* Colors */
-  --red: #ce0e0e;
+  --faded-black: #171616;
+  --dark-grey: #2b2b2b;
+  --grey: #4e4b47;
+  --grey-hover: #565650;
+  --red: #f61d1d;
   --dark-green: #00420f;
-  --dark-blue: #000d58;
   --primary-blue: #385ae0;
   --secondary-blue: #1637f5;
-  --green-fluo: #95ff00;
-  --green-fluo-hover: #85e300;
+  --dark-blue: #002346;
+  --green-fluo: #c3ff00;
+  --green-fluo-hover: #a5d701;
 
   /* Font sizes */
   --font-large: 17px;
@@ -44,7 +50,7 @@ body {
   flex-direction: column;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

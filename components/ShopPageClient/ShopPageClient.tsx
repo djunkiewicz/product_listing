@@ -7,6 +7,7 @@ import styles from "./ShopPageClient.module.css";
 import Header from '@/components/Header/Header';
 import ProductList from '@/components/ProductList/ProductList';
 import Button from "@/components/common/Button/Button";
+import Footer from "@/components/Footer/Footer";
 
 // Types
 import { Product } from "@/types/product.types";
@@ -52,6 +53,7 @@ export default function ShopPageClient({logoUrl, products}: Props) {
         </div>
         <ProductList  products={products} addToCartFn={addToCart} />
       </div>
+      <Footer/>
     </div>
   );
 }

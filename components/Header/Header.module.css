@@ -1,7 +1,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: var(--dark-green);
+    background-color: var(--faded-black);
     position: fixed;
     top: 0;
     left: 0;
@@ -25,7 +25,7 @@
 } 
 
 .companyName {
-    margin: 5px 10px 5px 10px;
+    margin: 5px 10px 5px 20px;
 }
 
 .cartButton {

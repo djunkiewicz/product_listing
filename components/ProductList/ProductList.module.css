@@ -1,5 +1,6 @@
 .mainContainer {
-    background-color: rgb(42, 42, 50);
+    background-color: var(--dark-grey);
+    padding-bottom: 50px;
 }
 
 .mainContainer > * {
@@ -31,7 +32,7 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .cardsContainer {
         grid-template-columns: 1fr;
     }

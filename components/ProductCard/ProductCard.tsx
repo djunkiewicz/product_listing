@@ -15,15 +15,12 @@ type Props = {
 
 export default function ProductCard({product, addToCartFn}: Props) {
   let description = product.description;
-  // if (product.articleNumber === '3821047') {
-  //   description = product.description + product.description + product.description;
-  // }
-  
+
   const calculatePromoPrice = (originalPrice: number, percentage: number): number => {
     return Number(((100 - percentage) / 100 * originalPrice).toFixed(2));
   }
 
-  let priceTemplate = <span>{product.price}$</span>
+  let priceTemplate = <span className={styles.normalPrice}>{product.price}$</span>
 
   if (product.promotion) {
     priceTemplate =
