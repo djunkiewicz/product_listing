@@ -9,10 +9,11 @@ import Button from "@/components/common/Button/Button";
 import ImageWithFallback from "@/components/common/ImageWithFallback/ImageWithFallback";
 
 type Props = {
-    product: Product
+    product: Product;
+    addToCartFn: () => void;
 }
 
-export default function ProductCard({product}: Props) {
+export default function ProductCard({product, addToCartFn}: Props) {
   let description = product.description;
   // if (product.articleNumber === '3821047') {
   //   description = product.description + product.description + product.description;
@@ -60,7 +61,7 @@ export default function ProductCard({product}: Props) {
           </div>
           <div className={styles.btnContainer}>
             <Button text="Details" type="secondary" size="medium" />
-            <Button text="Add to cart" type="primary" size="medium" />
+            <Button text="Add to cart" type="primary" size="medium" onClick={addToCartFn} />
           </div>
         </div>
     </div>

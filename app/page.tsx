@@ -2,47 +2,29 @@
 import styles from "./page.module.css";
 
 // Components
-import Header from '@/components/Header/Header';
-import ProductList from '@/components/ProductList/ProductList';
-import Button from "@/components/common/Button/Button";
+import ShopPageClient from "@/components/ShopPageClient/ShopPageClient";
 
 // Types
 import { Product } from "@/types/product.types";
 
-// NPM packages
-import axios from "axios";
-
 
 export default async function Home() {
-    const response = await axios.get(
-        "https://1jbod7rtr5.execute-api.eu-central-1.amazonaws.com/prod/exercise",
-        {
-            headers: {
-                "x-api-key": process.env.API_KEY!,
-            },
-        }
+    const response = await fetch(
+    "https://1jbod7rtr5.execute-api.eu-central-1.amazonaws.com/prod/exercise",
+    {
+        method: "GET",
+        headers: {
+        "x-api-key": process.env.API_KEY!,
+        },
+        cache: "no-store",
+    }
     );
-    const fetchedProducts: Product[] = response.data.products;
+    const data = await response.json();
+    const fetchedProducts: Product[] = data.products;
+    const logoUrl: string = data.logo.url;
     return (
     <main>
-      <Header imgUrl={response.data.logo.url}/>
-      <div className={styles.body}>
-        <div className={styles.topContainer}>
-          <div className={styles.introContainer}>
-            <span>DISCOVER. TRAIN. CONQUER.</span>
-            <h1>Equipment and clothing for your passions</h1>
-            <h5>Proven accessories and clothing that will withstand any conditions.</h5>
-            <div className={styles.btnGroup}>
-              <Button  text="See, what's new" type="primary" size="large" />
-              <Button  text="Check promotions" type="secondary" size="large" />
-            </div>
-          </div>
-        </div>
-        <div className={styles.benefitsContainer}>
-          <h4>DELIVERY PROMO QUALITY</h4>
-        </div>
-        <ProductList  products={fetchedProducts} />
-      </div>
+      <ShopPageClient logoUrl={logoUrl} products={fetchedProducts}/>
     </main>
   );
 }

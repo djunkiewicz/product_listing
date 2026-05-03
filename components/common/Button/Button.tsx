@@ -20,7 +20,7 @@ export default function Button({
   const classList = `${styles.btn} ${styles[type]} ${styles[size]}`
   return (
     <div className={styles.mainContainer}>
-        <button className={classList}>{text}</button>
+        <button className={classList} onClick={onClick}>{text}</button>
     </div>
   );
 }

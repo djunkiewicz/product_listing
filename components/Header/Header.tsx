@@ -2,18 +2,21 @@
 import styles from './Header.module.css';
 
 // Components
-import Button from "@/components/common/Button/Button"
+import Button from "@/components/common/Button/Button";
+import CartButton from '@/components/CartButton/CartButton';
 
 type Props = {
-    imgUrl: string;
+    logoUrl: string;
+    cartCounter: number;
+    clearCartFn: () => void;
 }
 
-export default function Header({imgUrl}: Props) {
+export default function Header({logoUrl, cartCounter, clearCartFn}: Props) {
   return (
     <header className={styles.header}>
         <div className={styles.leftPanel}>
             <h1 className={styles.companyName}>ActiveShop</h1>
-            <img className={styles.logo} src={imgUrl} />
+            <img className={styles.logo} src={logoUrl} />
         </div>
         <div className={styles.rightPanel}>
             <Button  text='Home' type='navbar' size='medium'/>
@@ -21,7 +24,7 @@ export default function Header({imgUrl}: Props) {
             <Button  text='About' type='navbar' size='medium'/>
             <Button  text='Partners' type='navbar' size='medium'/>
             <Button  text='Contact' type='navbar' size='medium'/>
-            <button className={styles.cartButton}><img src="shopping-cart.svg"/></button>
+            <CartButton cartCounter={cartCounter} clearCartFn={clearCartFn}/>
         </div>        
     </header>
   );
