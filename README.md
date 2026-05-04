@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## See the aplication demo
 **https://product-listing-beryl.vercel.app/**
 
-## Running applications on your local machine
+## Running application on your local machine
 1. Clone the repository
 2. **Create `.env.local` file in the root directory with the following variables:**
 
@@ -24,3 +24,13 @@ bun dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Key features
+- Header containing a logo and a shopping cart icon
+- Product listing page displaying a list of products
+- Each product card includes an image, title, description, brand, price, and promotion/discount information with calculated discounted price
+- Image component with fallback support for handling broken or missing images
+- Cart functionality with a badge showing the number of added items
+- Cart displaying a list of added products
+- Responsive layout of the application
+- Basic UI animations and transitions, such as hover and fade effects
