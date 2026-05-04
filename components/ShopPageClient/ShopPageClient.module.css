@@ -41,19 +41,19 @@
 .motto {
     color: var(--green-fluo);
     font-weight: bold;
-    animation: fadeUp 3s ease forwards;
-    animation-delay: 0.5s;
+    animation: fadeUp 2.5s ease forwards;
+    animation-delay: 0.3s;
 }
 
 .motto2 {
-    animation: fadeUp 3s ease forwards;
-    animation-delay: 0.5s;
+    animation: fadeUp 2.5s ease forwards;
+    animation-delay: 0.3s;
 }
 
 .motto3 {
     font-size: var(--font-medium);
-    animation: fadeUp 3s ease forwards;
-    animation-delay: 0.5s;
+    animation: fadeUp 2.5s ease forwards;
+    animation-delay: 0.3s;
 }
 
 .btnGroup {
