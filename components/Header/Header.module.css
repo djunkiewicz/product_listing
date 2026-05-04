@@ -27,13 +27,15 @@
     margin: 5px 10px 5px 20px;
 }
 
-.cartButton {
-    background-color: rgb(41, 78, 212);
-    border: none;
-    border-radius: 10px;
-    padding: 4px;
-    margin: 8px;
-    > img {
-        height: 30px;
+@media (max-width: 800px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: static;
+    }
+    .left-panel,
+    .rightPanel {
+        flex-direction: column;
     }
 }

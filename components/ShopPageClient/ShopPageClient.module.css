@@ -82,6 +82,17 @@
     }
 }
 
+@media (max-width: 800px) {
+    .benefitsContainer {
+        flex-direction: column;
+        margin: 10px 0 10px 0;
+        * {
+            margin: 5px 0 5px 0;
+        }
+    }
+
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
