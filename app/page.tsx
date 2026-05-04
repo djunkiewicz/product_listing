@@ -1,11 +1,11 @@
 // Styles
 import styles from "./page.module.css";
 
-// Components
-import ShopPageClient from "@/components/ShopPageClient/ShopPageClient";
-
 // Types
 import { Product } from "@/types/product.types";
+
+// Components
+import ShopPageClient from "@/components/ShopPageClient/ShopPageClient";
 
 
 export default async function Home() {

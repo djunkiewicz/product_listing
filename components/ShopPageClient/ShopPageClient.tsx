@@ -3,18 +3,19 @@
 // Styles
 import styles from "./ShopPageClient.module.css";
 
+// Types
+import { Product } from "@/types/product.types";
+
+// Utils
+
 // Components
 import Header from '@/components/Header/Header';
 import ProductList from '@/components/ProductList/ProductList';
 import Button from "@/components/common/Button/Button";
 import Footer from "@/components/Footer/Footer";
 
-// Types
-import { Product } from "@/types/product.types";
-
-// Hooks
+// External
 import { useState } from "react";
-
 
 type Props = {
     logoUrl: string;
@@ -23,16 +24,14 @@ type Props = {
 
 export default function ShopPageClient({logoUrl, products}: Props) {
 
-    const [cartCounter, setCartCounter] = useState(0);
     const [cartProducts, updateCart] = useState<Product[]>([]);
+    let cartCounter = cartProducts.length;
 
     const clearCart = () => {
-        setCartCounter(0);
         updateCart([]);
     }
 
     const addToCart = (product: Product) => {
-        setCartCounter((prev) => prev + 1);
         updateCart((list) => [...list, product]);
     };
 

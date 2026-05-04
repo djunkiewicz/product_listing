@@ -1,6 +1,15 @@
+// Styles
 import styles from './ProductList.module.css';
+
+// Types
+
+// Utils
+
+// Components
 import { Product } from '@/types/product.types';
 import ProductCard from '@/components/ProductCard/ProductCard'
+
+// External
 
 type Props = {
     products: Product[];

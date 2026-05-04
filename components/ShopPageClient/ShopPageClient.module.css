@@ -18,10 +18,9 @@
     flex-direction: column;
     justify-content: center;
     margin-left: var(--left-margin-main);
-}
-
-.introContainer > * {
-    margin: 10px 0 10px 0;
+    > * {
+        margin: 10px 0 10px 0;
+    }
 }
 
 .benefitsContainer {
@@ -42,48 +41,45 @@
 .motto {
     color: var(--green-fluo);
     font-weight: bold;
-    animation: fadeUp 3.5s ease forwards;
-    animation-delay: 1s;
+    animation: fadeUp 3s ease forwards;
+    animation-delay: 0.5s;
 }
 
 .motto2 {
-    animation: fadeUp 3.5s ease forwards;
-    animation-delay: 1s;
+    animation: fadeUp 3s ease forwards;
+    animation-delay: 0.5s;
 }
 
 .motto3 {
     font-size: var(--font-medium);
-    animation: fadeUp 3.5s ease forwards;
-    animation-delay: 1s;
+    animation: fadeUp 3s ease forwards;
+    animation-delay: 0.5s;
 }
 
 .btnGroup {
     display: flex;
     animation: fadeUp 1.5s ease forwards;
-    animation-delay: 2.5s;
-}
-
-.btnGroup > * {
-    margin-right: 10px;
+    animation-delay: 2s;
+    > * {
+        margin-right: 10px;
+    }
 }
 
 .benefitsContainer {
     display: flex;
     justify-content: space-between;
     margin: 0  calc(2.5 * var(--right-margin-main))  0 calc(2.5 * var(--left-margin-main));
-}
-
-.benefit {
-    margin: 0 40px 0 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--font-medium);
-}
-
-.benefitIcon {
-    max-height: 45px;
-    margin-right: 10px;
+    .benefit {
+        margin: 0 40px 0 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: var(--font-medium);
+        .benefitIcon {
+            max-height: 45px;
+            margin-right: 10px;
+        }
+    }
 }
 
 @keyframes fadeUp {

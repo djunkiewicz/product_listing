@@ -1,4 +1,13 @@
+// Styles
 import styles from './Button.module.css';
+
+// Types
+
+// Utils
+
+// Components
+
+// External
 
 type Props = {
     text: string;

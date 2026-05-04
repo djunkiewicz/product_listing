@@ -1,9 +1,8 @@
 .mainContainer {
     position: relative;
-}
-
-.mainContainer:hover {
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .cartButton {
@@ -12,13 +11,10 @@
     border-radius: 10px;
     padding: 4px 6px 3px 6px;
     margin: 10px 10px 5px 10px;
-    cursor: pointer;
-
-}
-
-.cartButton img {
-    height: 30px;
-    padding: 5px 5px 0 0;
+    img {
+        height: 30px;
+        padding: 5px 5px 0 0; 
+    }
 }
 
 .counter {

@@ -1,4 +1,13 @@
 // Styles
+
+// Types
+
+// Utils
+
+// Components
+
+// External
+
 import styles from './Footer.module.css';
 
 export default function Footer() {

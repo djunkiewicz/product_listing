@@ -1,5 +1,14 @@
 "use client";
 
+// Styles
+
+// Types
+
+// Utils
+
+// Components
+
+// External
 import { useState } from "react";
 import Image from "next/image";
 

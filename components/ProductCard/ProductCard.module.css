@@ -1,18 +1,15 @@
 .mainContainer {
     background-color: var(--grey);
-    
-    max-width: 400px;
-    min-width: 350px;
+    min-width: 300px;
     border-radius: 20px;
     overflow: hidden;
-}
+    &:hover {
+        background-color: var(--grey-hover);
+        .productImg {
+            transform: scale(1.2);
+        }
+    }
 
-.mainContainer:hover .productImg{
-    transform: scale(1.2);
-}
-
-.mainContainer:hover {
-    background-color: var(--grey-hover);
 }
 
 .imagesWrapper {
@@ -66,16 +63,15 @@
 
 .brandValue {
     display: flex;
-    align-items: center;   
+    align-items: center;
+    > * {
+        margin-left: 8px;
+    }
+    > img {
+        height: 35px;
+    }
 }
 
-.brandValue > * {
-    margin-left: 8px;
-}
-
-.brandValue > img {
-    height: 35px;
-}
 
 .promoName {
     color: var(--red);
@@ -101,8 +97,7 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 5px;
-}
-
-.btnContainer > * {
-    margin-left: 10px;
+    > * {
+        margin-left: 10px;
+    }
 }

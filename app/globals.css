@@ -7,9 +7,7 @@
   /* Colors */
   --faded-black: #171616;
   --dark-grey: #2b2b2b;
-  --grey: #4e4b47;
   --grey: #383636;
-  --grey-hover: #565650;
   --grey-hover: #4d4a4a;
   --red: #f61d1d;
   --dark-green: #00420f;
@@ -25,8 +23,8 @@
   --font-small: 13px;
 
   /* Margins */
-  --left-margin-main: 120px;
-  --right-margin-main: 120px;
+  --left-margin-main: 10vw;
+  --right-margin-main: 10vw;
 }
 
 @media (prefers-color-scheme: dark) {

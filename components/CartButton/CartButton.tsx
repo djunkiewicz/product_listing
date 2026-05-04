@@ -1,7 +1,13 @@
 // Styles
 import styles from './CartButton.module.css';
 
+// Types
+
+// Utils
+
 // Components
+
+// External
 
 type Props = {
     cartCounter: number;

@@ -3,15 +3,17 @@
 // Styles
 import styles from './Header.module.css';
 
+// Types
+import { Product } from '@/types/product.types';
+
+// Utils
+
 // Components
 import Button from "@/components/common/Button/Button";
 import CartButton from '@/components/CartButton/CartButton';
 import Cart from '@/components/Cart/Cart';
 
-// Types
-import { Product } from '@/types/product.types';
-
-// Others
+// External
 import { useState } from 'react';
 
 type Props = {

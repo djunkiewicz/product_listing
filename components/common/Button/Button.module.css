@@ -1,10 +1,9 @@
 .btn {
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
-}
-
-.btn:hover {
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .primary {
@@ -12,11 +11,10 @@
     background-color: var(--green-fluo);
     border: 1px solid var(--green-fluo);
     font-weight: bold;
-}
-
-.primary:hover {
-    background-color: var(--green-fluo-hover);
-    border: 1px solid var(--green-fluo-hover);
+    &:hover {
+        background-color: var(--green-fluo-hover);
+        border: 1px solid var(--green-fluo-hover);
+    }
 }
 
 .secondary {
@@ -24,23 +22,19 @@
     background-color: var(--dark-blue);
     border: 1px solid var(--green-fluo);
     font-weight: bold;
-}
-
-.secondary:hover {
-    color: var(--dark-blue);
-    background-color: var(--green-fluo-hover);
-    border: 1px solid var(--green-fluo-hover);
+    &:hover {
+        color: var(--dark-blue);
+        background-color: var(--green-fluo-hover);
+        border: 1px solid var(--green-fluo-hover);
+    }
 }
 
 .navbar {
     background-color: transparent;
     border: none;
-    /* background-color:grey */
-}
-
-.navbar:hover {
-    color: var(--green-fluo);
-    /* background-color:grey */
+    &:hover {
+        color: var(--green-fluo);
+    }
 }
 
 .small {

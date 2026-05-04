@@ -11,6 +11,8 @@ import { calculateFinalPrice } from '@/utils/product.utils';
 import ImageWithFallback from '../common/ImageWithFallback/ImageWithFallback';
 import Button from '@/components/common/Button/Button';
 
+// External
+
 type Props = {
     products: Product[];
     clearCartFn: () => void;

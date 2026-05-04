@@ -2,17 +2,15 @@
     background-color: var(--dark-grey);
     background-color: var(--faded-black);
     padding-bottom: 50px;
-}
-
-.mainContainer > * {
-    margin-left: var(--left-margin-main);
-    margin-right: var(--right-margin-main);
-}
-
-.mainContainer > h2 {
-    color: white;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    > * {
+        margin-left: var(--left-margin-main);
+        margin-right: var(--right-margin-main);
+    }
+    > h2 {
+        color: white;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 }
 
 .cardsContainer {
