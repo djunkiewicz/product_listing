@@ -31,7 +31,8 @@ export default function ShopPageClient({logoUrl, products}: Props) {
         updateCart([]);
     }
 
-    const addToCart = (product: Product) => {
+    const addToCart = async (product: Product) => {
+        await new Promise(resolve => setTimeout(resolve, 500));
         updateCart((list) => [...list, product]);
     };
 
