@@ -10,7 +10,7 @@ import styles from './Button.module.css';
 // External
 
 type Props = {
-    text: string;
+    text?: string;
     type: 'primary' | 'secondary' | 'navbar';
     size: 'small' | 'medium' | 'large';
     onClick?: () => void;
@@ -28,7 +28,7 @@ export default function Button({
   return (
     <div className={styles.mainContainer}>
         <button className={classList} onClick={onClick}>
-            {text}
+            {text && text}
             {iconSrc &&
                 <img className={styles.icon} src={iconSrc} />
             }

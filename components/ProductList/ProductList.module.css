@@ -6,7 +6,7 @@
         margin-left: var(--left-margin-main);
         margin-right: var(--right-margin-main);
     }
-    > h2 {
+    h2 {
         color: white;
         margin-top: 15px;
         margin-bottom: 15px;
@@ -17,6 +17,24 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
+}
+
+.topContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filterPanel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .text {
+        font-size: var(--font-medium);
+    }
+    > * {
+        margin: 0 5px 0 5px;
+    }
 }
 
 @media (max-width: 1600px) {
