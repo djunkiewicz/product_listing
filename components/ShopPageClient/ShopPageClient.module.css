@@ -24,14 +24,6 @@
     margin: 10px 0 10px 0;
 }
 
-.btnGroup {
-    display: flex;
-}
-
-.btnGroup > * {
-    margin-right: 10px;
-}
-
 .benefitsContainer {
     min-height: 60px;
     display: flex;
@@ -40,13 +32,39 @@
     background-color: var(--dark-blue);
 }
 
+.motto,
+.motto2,
+.motto3,
+.btnGroup {
+  opacity: 0;
+}
+
 .motto {
     color: var(--green-fluo);
     font-weight: bold;
+    animation: fadeUp 3.5s ease forwards;
+    animation-delay: 1s;
+}
+
+.motto2 {
+    animation: fadeUp 3.5s ease forwards;
+    animation-delay: 1s;
 }
 
 .motto3 {
     font-size: var(--font-medium);
+    animation: fadeUp 3.5s ease forwards;
+    animation-delay: 1s;
+}
+
+.btnGroup {
+    display: flex;
+    animation: fadeUp 1.5s ease forwards;
+    animation-delay: 2.5s;
+}
+
+.btnGroup > * {
+    margin-right: 10px;
 }
 
 .benefitsContainer {
@@ -66,4 +84,15 @@
 .benefitIcon {
     max-height: 45px;
     margin-right: 10px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
