@@ -1,6 +1,8 @@
 .btn {
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
     &:hover {
         cursor: pointer;
     }
@@ -37,20 +39,37 @@
     }
 }
 
+/* .icon {
+    height: 30px;
+    margin-left: 10px;
+} */
+
 .small {
     height: 30px;
     font-size: var(--font-small);
     padding: 6px;
+    .icon {
+        height: 26px;
+        margin-left: 8px;
+    }
 }
 
 .medium {
     height: 42px;
     font-size: var(--font-medium);
     padding: 8px;
+    .icon {
+        height: 30px;
+        margin-left: 8px;
+    }
 }
 
 .large {
     height: 55px;
     font-size: var(--font-large);
     padding: 10px;
+    .icon {
+        height: 50px;
+        margin-left: 10px;
+    }
 }

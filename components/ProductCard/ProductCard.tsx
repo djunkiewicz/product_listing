@@ -60,7 +60,7 @@ export default function ProductCard({product, addToCartFn}: Props) {
           </div>
           <div className={styles.btnContainer}>
             <Button text="Details" type="secondary" size="medium" />
-            <Button text="Add to cart" type="primary" size="medium" onClick={() => addToCartFn(product)} />
+            <Button text="Add to cart" type="primary" size="medium" onClick={() => addToCartFn(product)} iconSrc="/icons/cart-add.svg" />
           </div>
         </div>
     </div>
