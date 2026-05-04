@@ -4,24 +4,24 @@ import styles from "./ProductCard.module.css";
 // Types
 import { Product } from "@/types/product.types";
 
-//Components
+// Utils
+import { calculateFinalPrice } from "@/utils/product.utils";
+
+// Components
 import Button from "@/components/common/Button/Button";
 import ImageWithFallback from "@/components/common/ImageWithFallback/ImageWithFallback";
 
 type Props = {
     product: Product;
-    addToCartFn: () => void;
+    addToCartFn: (product: Product) => void;
 }
 
 export default function ProductCard({product, addToCartFn}: Props) {
+
   let description = product.description;
 
-  const calculatePromoPrice = (originalPrice: number, percentage: number): number => {
-    return Number(((100 - percentage) / 100 * originalPrice).toFixed(2));
-  }
-
-  let priceTemplate = <span className={styles.normalPrice}>{product.price}$</span>
-
+  const finalPrice: number = calculateFinalPrice(product.price, product.promotion);
+  let priceTemplate = <span className={styles.normalPrice}>{finalPrice}$</span>
   if (product.promotion) {
     priceTemplate =
     <span>
@@ -29,7 +29,7 @@ export default function ProductCard({product, addToCartFn}: Props) {
       <span className={styles.oldPrice}>{product.price}$ </span>
       <span className={styles.newPrice}>
         &nbsp;&nbsp;
-        {calculatePromoPrice(product.price, product.promotion.percentage)}$
+        {finalPrice}$
       </span>
     </span>
   }
@@ -58,7 +58,7 @@ export default function ProductCard({product, addToCartFn}: Props) {
           </div>
           <div className={styles.btnContainer}>
             <Button text="Details" type="secondary" size="medium" />
-            <Button text="Add to cart" type="primary" size="medium" onClick={addToCartFn} />
+            <Button text="Add to cart" type="primary" size="medium" onClick={() => addToCartFn(product)} />
           </div>
         </div>
     </div>

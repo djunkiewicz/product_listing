@@ -4,7 +4,7 @@ import ProductCard from '@/components/ProductCard/ProductCard'
 
 type Props = {
     products: Product[];
-    addToCartFn: () => void;
+    addToCartFn: (product: Product) => void;
 }
 
 export default function ProductList({products, addToCartFn}: Props) {

@@ -1,17 +1,33 @@
+"use client";
+
 // Styles
 import styles from './Header.module.css';
 
 // Components
 import Button from "@/components/common/Button/Button";
 import CartButton from '@/components/CartButton/CartButton';
+import Cart from '@/components/Cart/Cart';
+
+// Types
+import { Product } from '@/types/product.types';
+
+// Others
+import { useState } from 'react';
 
 type Props = {
     logoUrl: string;
     cartCounter: number;
+    cartProducts: Product[];
     clearCartFn: () => void;
 }
 
-export default function Header({logoUrl, cartCounter, clearCartFn}: Props) {
+export default function Header({logoUrl, cartCounter, clearCartFn, cartProducts}: Props) {
+
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const toggleCart = () => {
+    setIsCartOpen(prev => !prev);
+  };
+
   return (
     <header className={styles.header}>
         <div className={styles.leftPanel}>
@@ -24,7 +40,10 @@ export default function Header({logoUrl, cartCounter, clearCartFn}: Props) {
             <Button  text='About' type='navbar' size='medium'/>
             <Button  text='Partners' type='navbar' size='medium'/>
             <Button  text='Contact' type='navbar' size='medium'/>
-            <CartButton cartCounter={cartCounter} clearCartFn={clearCartFn}/>
+            <CartButton cartCounter={cartCounter} onClick={toggleCart} />
+            {isCartOpen && (
+                <Cart clearCartFn={clearCartFn} products={cartProducts} />
+            )}
         </div>        
     </header>
   );

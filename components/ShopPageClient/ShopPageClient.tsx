@@ -24,18 +24,21 @@ type Props = {
 export default function ShopPageClient({logoUrl, products}: Props) {
 
     const [cartCounter, setCartCounter] = useState(0);
-
-    const addToCart = () => {
-        setCartCounter((prev) => prev + 1);
-    };
+    const [cartProducts, updateCart] = useState<Product[]>([]);
 
     const clearCart = () => {
         setCartCounter(0);
+        updateCart([]);
     }
+
+    const addToCart = (product: Product) => {
+        setCartCounter((prev) => prev + 1);
+        updateCart((list) => [...list, product]);
+    };
 
     return (
     <div className={styles.test}>
-      <Header logoUrl={logoUrl} cartCounter={cartCounter} clearCartFn={clearCart}/>
+      <Header logoUrl={logoUrl} cartCounter={cartCounter} clearCartFn={clearCart} cartProducts={cartProducts}/>
       <div className={styles.body}>
         <div className={styles.topContainer}>
           <div className={styles.introContainer}>
